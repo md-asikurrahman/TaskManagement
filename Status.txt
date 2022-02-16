@@ -1,0 +1,7 @@
+Task == task details, task index, {service, repo etc }
+Project == project details, {service, repo etc }
+ProjectEmp == done
+TaskEmp == done 
+Task == details, create,  {service, repo etc }
+Employee == done 
+TaskPerformed ==

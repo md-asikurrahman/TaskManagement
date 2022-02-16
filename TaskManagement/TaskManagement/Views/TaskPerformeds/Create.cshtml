@@ -1,0 +1,52 @@
+﻿@model TaskPerformed
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TaskPerformed</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TaskEmpId" class="control-label"></label>
+                <select asp-for="TaskEmpId" class ="form-control" asp-items="ViewBag.TaskEmpId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkDate" class="control-label"></label>
+                <input asp-for="WorkDate" class="form-control" />
+                <span asp-validation-for="WorkDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePCT" class="control-label"></label>
+                <input asp-for="CompletePCT" class="form-control" />
+                <span asp-validation-for="CompletePCT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remarks" class="control-label"></label>
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoursConsumed" class="control-label"></label>
+                <input asp-for="HoursConsumed" class="form-control" />
+                <span asp-validation-for="HoursConsumed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
